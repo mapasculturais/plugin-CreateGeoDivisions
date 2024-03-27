@@ -1,0 +1,14 @@
+# Plugin CreateGeoDivisions
+Plugin para criação de novas divisões geográficas a partir de um arquivo `.csv`
+
+## Arquivo .csv
+ - O arquivo csv deve ser adicionado na pasta /import-files do plugin
+
+## Exemplo do arquivo .csv
+```
+filtro,15
+municipio,RI
+Água Azul do Norte,Região Araguaia
+Bannach,Região Araguaia
+Conceição do Araguaia,Região Araguaia
+```
