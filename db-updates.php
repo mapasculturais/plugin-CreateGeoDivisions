@@ -27,7 +27,7 @@ return [
                 continue;
             }
     
-            link($file_name, $target_file);
+            copy($file_name, $target_file);
     
             $file = fopen($file_name, 'r');
             $regioes = [];
