@@ -66,7 +66,7 @@ return [
                     $keys[uniqid()] = $municipio;
                 }
                 $in_municipios = 'lower(unaccent(:' . implode(')), lower(unaccent(:', array_keys($keys)) . '))';
-                $sql = "INSERT INTO geo_division (type, cod, name, geom) VALUES ('$nova_regiao', '$regiao', '$regiao', (SELECT ST_Union(geom) AS poligono_unido FROM geo_division WHERE lower(unaccent(name)) IN($in_municipios) AND cod LIKE '$filtro%'))";
+                $sql = "INSERT INTO geo_division (type, cod, name, geom) VALUES ('{$nova_regiao}', '{$regiao}', '{$regiao}', (SELECT ST_Union(geom) AS poligono_unido FROM geo_division WHERE lower(unaccent(name)) IN($in_municipios) AND cod LIKE '$filtro%'))";
                 $conn->executeQuery($sql, $keys);
             }
         }
